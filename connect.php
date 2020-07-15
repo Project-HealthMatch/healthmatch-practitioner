@@ -5,14 +5,7 @@
      $email = $_POST['email'];
 
 
-  $host = 'healthmatch-server.mysql.database.azure.com';
-  $username = 'HEALTHMATCH@healthmatch-server';
-  $password = 'Hackathon2020';
-  $db_name = 'schedule';
-  
-  //Establishes the connection
-  $conn = mysqli_init();
-  mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+$conn = new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','schedule');
   if (mysqli_connect_errno($conn)) {
   die('Failed to connect to MySQL: '.mysqli_connect_error());
   }

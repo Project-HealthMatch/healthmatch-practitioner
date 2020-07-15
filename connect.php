@@ -31,7 +31,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
   }
   else {
     $SELECT = "SELECT email From resister Where email =? Limit 1 ";
-    $INSERT = "INSERT Into bookings (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";
+    $INSERT = "INSERT Into resister (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($SELECT);
     $stmt->bind_param("s",$email);
     $stmt->execute();
@@ -43,7 +43,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
     $b=implode(",",$Languages);
     $stmt->bind_param("ssiissss",$fname,$lname,$countryCode,$phone,$email,$gender,$b,$msg);
     $stmt->execute();
-    header("location: submitted.php");
+    header("location: thankyouvolunteer.php");
     exit;
   }
   else{ echo"there exists";}

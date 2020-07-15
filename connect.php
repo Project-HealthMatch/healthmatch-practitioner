@@ -4,12 +4,10 @@
      $slot = $_POST['slot'];
      $email = $_POST['email'];
 
-
-     $conn = new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','schedule', 3306);
-     if($conn->connect_error)
-     {
-       die('connection failed :' .$conn->connect_error);
-
+     $conn = mysqli_init();
+     mysqli_real_connect($conn, "healthmatch-server.mysql.database.azure.com", "HEALTHMATCH@healthmatch-server", "Hackathon2020", "schedule", 3306);
+     if (mysqli_connect_errno($conn)) {
+     die('Failed to connect to MySQL: '.mysqli_connect_error());
      }
      else
 

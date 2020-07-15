@@ -5,7 +5,7 @@
      $email = $_POST['email'];
 
 
-     $conn = new mysqli('localhost','root','root','schedule');
+     $conn = new mysqli('healthmatch-server.mysql.database.azure.com','root','root','schedule');
      if($conn->connect_error)
      {
        die('connection failed :' .$conn->connect_error);

@@ -21,7 +21,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
 { $host = 'healthmatch-server.mysql.database.azure.com';
   $username = 'HEALTHMATCH@healthmatch-server';
   $password = 'Hackathon2020';
-  $db_name = 'volunteer';
+  $db_name = 'schedule';
   
   //Establishes the connection
   $conn = mysqli_init();
@@ -31,7 +31,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
   }
   else {
     $SELECT = "SELECT email From resister Where email =? Limit 1 ";
-    $INSERT = "INSERT Into resister (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";
+    $INSERT = "INSERT Into bookings (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($SELECT);
     $stmt->bind_param("s",$email);
     $stmt->execute();

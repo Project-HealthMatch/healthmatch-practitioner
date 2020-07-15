@@ -3,7 +3,7 @@
   $password = $_POST['password'];
 
 
-  $con = new mysqli("localhost", "root","root","hac_db");
+  $con = new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','hac_db');
   if($con->connect_error){
 
     die("Failed to connect :".$con->connect_error);

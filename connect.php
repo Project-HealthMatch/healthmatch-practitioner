@@ -5,7 +5,7 @@
      $email = $_POST['email'];
 
      $conn = mysqli_init();
-     mysqli_real_connect($conn, "healthmatch-server.mysql.database.azure.com", "root", "Hackathon2020", "schedule", 3306);
+     mysqli_real_connect($conn, "healthmatch-server.mysql.database.azure.com", "HEALTHMATCH@healthmatch-server", "Hackathon2020", "schedule", 3306);
      if (mysqli_connect_errno($conn)) {
      die('Failed to connect to MySQL: '.mysqli_connect_error());
      }

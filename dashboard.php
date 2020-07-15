@@ -1,7 +1,7 @@
 <?php
 
 function build_calendar($month,$year){
-    $mysqli= new mysqli('localhost','root','root','');
+    $mysqli= new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','');
 
 }
 

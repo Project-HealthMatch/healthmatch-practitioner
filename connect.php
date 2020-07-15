@@ -5,7 +5,7 @@
      $email = $_POST['email'];
 
 
-     $conn = new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','schedule');
+     $conn = new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','schedule', 3306);
      if($conn->connect_error)
      {
        die('connection failed :' .$conn->connect_error);

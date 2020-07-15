@@ -43,7 +43,7 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
     $b=implode(",",$Languages);
     $stmt->bind_param("ssiissss",$fname,$lname,$countryCode,$phone,$email,$gender,$b,$msg);
     $stmt->execute();
-    header("location: thankyouvolunteer.php");
+    header("location: submitted.php");
     exit;
   }
   else{ echo"there exists";}

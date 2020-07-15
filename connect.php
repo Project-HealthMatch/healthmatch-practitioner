@@ -14,13 +14,12 @@
      else
 
      {
-       $stmt = $conn->prepare("insert into bookings(date, timeZoneId, slot, email)
-       values(?, ?, ?, ?)");
-      $b=implode(",",$slot);
+       $stmt = $conn->prepare("insert into bookings(date, timeZoneId, slot, email) values(?, ?, ?, ?)");
+       $b=implode(",",$slot);
        $stmt->bind_param("ssss",$date,$timeZoneId, $b, $email);
        $stmt->execute();
        echo "slot booked";
-      header("Location:submitted.php");
+       header("Location:submitted.php");
        $stmt->close();
        $conn->close();
 

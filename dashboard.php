@@ -1,6 +1,7 @@
 <?php
 
 function build_calendar($month,$year){
+$conn=new mysqli('localhost','root','root','schedule');
     
 
 }

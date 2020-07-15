@@ -20,7 +20,7 @@
 
      {
        $stmt = $conn->prepare("insert into bookings(date, timeZoneId, slot, email)
-       values(?, ?, ?, ?);
+       values(?, ?, ?, ?)");
       $b=implode(",",$slot);
        $stmt->bind_param("ssss",$date,$timeZoneId, $b, $email);
        $stmt->execute();

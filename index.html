@@ -164,7 +164,7 @@
         border-radius: 0.4em;
         bottom: 0;
         box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
-        height: 60%;
+        height: 55%;
         left: 0;
         margin: auto;
         overflow: hidden;
@@ -182,7 +182,7 @@
           border-radius: 0.4em;
           bottom: 0;
           box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
-          height: 60%;
+          height: 50%;
           left: 0;
           margin: auto;
           overflow: hidden;
@@ -366,6 +366,19 @@
         text-shadow: 0 0 1px black;
         background: #ee0000 !important;
       }
+
+	  .logo{
+margin-top: 1rem;
+		  width:35%;
+	  }
+
+	  @media(min-width:800px){
+.logo{
+	margin:1rem;
+	width:15%;
+}
+		  
+	  }
     </style>
   </head>
   <body>
@@ -373,7 +386,7 @@
       <div class="background"></div>
     </div>
     <div style="text-align: center;">
-      <img src="logo.png" style="width: 15%;" />
+      <img src="logo.png" class="logo">
     </div>
     <form action="login.php" method="post">
       <h1>WELCOME</h1>

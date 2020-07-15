@@ -1,7 +1,7 @@
 <?php
 
 function build_calendar($month,$year){
-    $mysqli= new mysqli('healthmatch-server.mysql.database.azure.com','HEALTHMATCH@healthmatch-server','Hackathon2020','schedule');
+    $conn= new mysqli('localhost','root','root','schedule');
 
 }
 
@@ -273,7 +273,7 @@ th{
   <div style="text-align:center;" >
         <h3 style="color:white;">
 
-Welcome 
+Welcome
 
 
     </h3>

@@ -5,7 +5,7 @@
      $email = $_POST['email'];
 
 
-{ $host = 'healthmatch-server.mysql.database.azure.com';
+  $host = 'healthmatch-server.mysql.database.azure.com';
   $username = 'HEALTHMATCH@healthmatch-server';
   $password = 'Hackathon2020';
   $db_name = 'schedule';

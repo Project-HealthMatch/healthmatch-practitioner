@@ -30,8 +30,8 @@ if (!empty($fname) || !empty($lname) || !empty($countryCode) || !empty($phone) |
   die('Failed to connect to MySQL: '.mysqli_connect_error());
   }
   else {
-    $SELECT = "SELECT email From resister Where email =? Limit 1 ";
-    $INSERT = "INSERT Into resister (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";
+    $SELECT = "SELECT email From bookings Where email =? Limit 1 ";
+    $INSERT = "INSERT Into bookings (fname,lname,countryCode,phone,email,gender,Languages,msg) values(?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($SELECT);
     $stmt->bind_param("s",$email);
     $stmt->execute();

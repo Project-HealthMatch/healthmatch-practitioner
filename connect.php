@@ -19,8 +19,9 @@
       $b=implode(",",$slot);
        $stmt->bind_param("ssss",$date,$timeZoneId, $b, $email);
        $stmt->execute();
-       echo "slot booked";
-      header("Location:submitted.php");
+       header("location: submitted.php");
+       exit;
+
        $stmt->close();
        $conn->close();
 

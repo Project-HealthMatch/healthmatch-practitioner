@@ -1,12 +1,3 @@
-<?php
-
-function build_calendar($month,$year){
-    $conn= new mysqli('localhost','root','root','schedule');
-
-}
-
-
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -399,8 +390,8 @@ Welcome
   </div>
 
   <div class="time">
-      <td>04:00AM-05:00</td>
-      <th><input type="checkbox" name="slot[]" value="03:00-04:00"></th>
+      <td>04:00-05:00</td>
+      <th><input type="checkbox" name="slot[]" value="04:00-05:00"></th>
   </div>
 
      <div class="time"> <td>05:00-06:00</td>
@@ -525,7 +516,7 @@ Welcome
 <div style="text-align: center;">
 
 
-    <button type="submit" class=" submits " value="Submit"> Submit Slots</button>
+    <button type="submit" class=" submits " value="Submit" name="btn-save"> Submit Slots</button>
 </div>
             </form>
 

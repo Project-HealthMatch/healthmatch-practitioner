@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login Page</title>
     <link rel="stylesheet" type="text/css href="css/bootstrap.css">
     <style>
@@ -164,18 +165,18 @@
         border-radius: 0.4em;
         bottom: 0;
         box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
-        height: 55%;
+        height: 50%;
         left: 0;
         margin: auto;
         overflow: hidden;
         position: absolute;
         right: 0;
         top: 0;
-        width: 30%;
+        width: 80%;
         padding: 3rem;
       }
 
-      @media (max-width: 800px) {
+      @media (min-width: 800px) {
         form {
           background: #111;
           border: 1px solid #191919;
@@ -206,23 +207,6 @@
         );
         content: "";
         display: block;
-        height: 1px;
-        left: 50px;
-        position: absolute;
-        top: 0;
-        width: 150px;
-      }
-
-      form:before {
-        border-radius: 50%;
-        box-shadow: 0 0 6px 4px #fff;
-        content: "";
-        display: block;
-        height: 5px;
-        left: 34%;
-        position: absolute;
-        top: -7px;
-        width: 8px;
       }
 
       .inset {
@@ -369,7 +353,7 @@
 
       .logo {
         margin-top: 1rem;
-        width: 210px;
+        width: 40%;
         margin-bottom: 1rem;
       }
 
@@ -382,6 +366,7 @@
     </style>
   </head>
   <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <div class="background-wrap">
       <div class="background"></div>
     </div>

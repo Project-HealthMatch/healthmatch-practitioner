@@ -1,3 +1,17 @@
+<?
+session_start();
+
+if($_SESSION["user"]==true){
+
+}
+else{
+    header("Location: index.php");
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -264,7 +278,8 @@ th{
   <div style="text-align:center;" >
         <h3 style="color:white;">
 
-Welcome
+
+<?echo "WELCOME"." ".$_SESSION['user'];?>
 
 
     </h3>

@@ -1,3 +1,14 @@
+<?
+session_start();
+
+if($_SESSION["user"]==true){
+
+}
+else{
+    header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

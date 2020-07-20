@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login Page</title>
+    <link rel="stylesheet" type="text/css href="css/bootstrap.css">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Audiowide);
+
+      ::-moz-selection {
+        background: #cc0000;
+        text-shadow: none;
+      }
+
+      ::selection {
+        background: #cc0000;
+        text-shadow: none;
+      }
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+        text-rendering: optimizeLegibility;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .background-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .background {
+        background: url("https://images.pexels.com/photos/3354675/pexels-photo-3354675.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+        background-position: center;
+        background-size: cover;
+        filter: brightness(70%);
+        height: 105%;
+        position: relative;
+        width: 105%;
+        right: -2.5%;
+        left: -2.5%;
+        top: -2.5%;
+        bottom: -2.5%;
+      }
+
+      * {
+        box-sizing: border-box;
+        cursor: default;
+        outline: none;
+      }
+
+      form {
+        background: #111;
+        border: 1px solid #191919;
+        border-radius: 0.4em;
+        bottom: 0;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+        height: 50%;
+        left: 0;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        padding: 3rem;
+      }
+
+      @media (min-width: 800px) {
+        form {
+          background: #111;
+          border: 1px solid #191919;
+          border-radius: 0.4em;
+          bottom: 0;
+          box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+          height: 300px;
+          left: 0;
+          margin: auto;
+          overflow: hidden;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 300px;
+          padding: 3rem;
+        }
+      }
+
+      form:after {
+        background: linear-gradient(
+          to right,
+          #111111,
+          #444444,
+          #b6b6b8,
+          #444444,
+          #2f2f2f,
+          #272727
+        );
+        content: "";
+        display: block;
+      }
+
+      .inset {
+        border-top: 1px solid #19191a;
+        padding: 20px;
+      }
+
+      form h1 {
+        font-family: "Audiowide";
+        border-bottom: 1px solid #000;
+        font-size: 18px;
+        padding: 15px 0;
+        position: relative;
+        text-align: center;
+        text-shadow: 0 1px 0 #000;
+      }
+
+      form h1 {
+        color: #66fcf1;
+        font-family: "Poppins", sans-serif;
+        font-weight: normal;
+      }
+
+      form h1.poweron {
+        color: #ffffff;
+        transition: all 0.5s;
+        animation: flicker 1s ease-in-out 1 alternate,
+          neon 1.5s ease-in-out infinite alternate;
+        animation-delay: 0s, 1s;
+      }
+
+      form h1:after {
+        position: absolute;
+        width: 30%;
+        height: 60%;
+        content: "";
+        display: block;
+        pointer-events: none;
+        top: 0;
+        margin-left: 138px;
+        transform-style: flat;
+        transform: skew(20deg);
+
+        background: -moz-linear-gradient(
+          top,
+          hsla(0, 0%, 100%, 0.1) 0%,
+          hsla(0, 0%, 100%, 0) 100%
+        );
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, hsla(0, 0%, 100%, 0.2)),
+          color-stop(100%, hsla(0, 0%, 100%, 0))
+        );
+        background: -webkit-linear-gradient(
+          top,
+          hsla(0, 0%, 100%, 0.1) 0%,
+          hsla(0, 0%, 100%, 0) 100%
+        );
+        background: -o-linear-gradient(
+          top,
+          hsla(0, 0%, 100%, 0.1) 0%,
+          hsla(0, 0%, 100%, 0) 100%
+        );
+        background: -ms-linear-gradient(
+          top,
+          hsla(0, 0%, 100%, 0.1) 0%,
+          hsla(0, 0%, 100%, 0) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42ffffff', endColorstr='#00ffffff',GradientType=0 );
+        background: linear-gradient(
+          to bottom,
+          hsla(0, 0%, 100%, 0.1) 0%,
+          hsla(0, 0%, 100%, 0) 100%
+        );
+      }
+
+      .inset {
+        border-top: 1px solid #19191a;
+        padding: 20px;
+      }
+
+      form h1 {
+        font-family: "Audiowide";
+        border-bottom: 1px solid #000;
+        font-size: 2rem;
+        padding: 15px 0;
+        position: relative;
+        text-align: center;
+        text-shadow: 0 1px 0 #000;
+      }
+
+      form h1 {
+        color: #66fcf1;
+        font-family: "Poppins", sans-serif;
+        font-weight: normal;
+      }
+
+      input[type="username"],
+      input[type="password"] {
+        background: linear-gradient(#1f2124, #27292c);
+        border: 1px solid #222;
+        border-radius: 0.3em;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-size: 13px;
+        margin-bottom: 20px;
+        padding: 8px 5px;
+        width: 100%;
+      }
+
+      input[type="text"]:disabled,
+      input[type="password"]:disabled {
+        color: #999;
+      }
+
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        height: 35px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #45a29e, #5bcadd, #3292be);
+        background-size: 200%;
+        font-size: 1.5rem;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      input[type="submit"]:hover {
+        background-position: right;
+      }
+
+      .denied {
+        color: white !important;
+        text-shadow: 0 0 1px black;
+        background: #ee0000 !important;
+      }
+
+      .logo {
+        margin-top: 1rem;
+        width: 40%;
+        margin-bottom: 1rem;
+      }
+
+      @media (min-width: 800px) {
+        .logo {
+          margin: 1rem;
+          width: 15%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div class="background-wrap">
+      <div class="background"></div>
+    </div>
+    <div style="text-align: center;">
+      <img src="logo.png" class="logo" />
+    </div>
+    <form action="login.php" method="post">
+      <h1>WELCOME</h1>
+      <input
+        type="username"
+        id="username"
+        name="username"
+        placeholder="Username"
+      />
+
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+      />
+
+      <input type="submit" class="submits" value="Login" name=" " />
+    </form>
+  </body>
+</html>

@@ -178,12 +178,13 @@ padding-right: 1rem;
   color: rgb(34, 34, 34);
   border-color:rgb(44, 250, 181);
 
- border-style: solid;
+ border-style: solid 0.08rem;
 background-color:rgba(255, 245, 245, 0.836);
 
   background-image: linear-gradient(rgb(133, 233, 200), rgba(255, 245, 245, 0.836), rgba(255, 245, 245, 0.836), rgba(255, 245, 245, 0.836),  rgba(255, 245, 245, 0.836),rgb(133, 233, 200));
 
-border-width: 0.5rem;
+height: 3.5rem;
+padding-top: 0.5rem;
 
 
 

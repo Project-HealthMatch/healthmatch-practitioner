@@ -78,6 +78,7 @@ else{
 .topnav {
   background-color: rgb(142, 196, 221);
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 /* Style the links inside the navigation bar */
@@ -178,12 +179,13 @@ padding-right: 1rem;
   color: rgb(34, 34, 34);
   border-color:rgb(44, 250, 181);
 
- border-style: solid;
+ border-style: solid 0.08rem;
 background-color:rgba(255, 245, 245, 0.836);
 
   background-image: linear-gradient(rgb(133, 233, 200), rgba(255, 245, 245, 0.836), rgba(255, 245, 245, 0.836), rgba(255, 245, 245, 0.836),  rgba(255, 245, 245, 0.836),rgb(133, 233, 200));
 
-border-width: 0.5rem;
+height: 3.5rem;
+padding-top: 0.5rem;
 
 
 
@@ -256,6 +258,9 @@ th{
   color:rgb(15, 7, 53);
 }
 
+i{
+        margin-right:0.3rem;
+      }
 
 
 
@@ -268,6 +273,7 @@ th{
   <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
 
 
+  <a href="<?php echo "request.php"; ?>"><i class="fa fa-user"></i>Appoinments</a>
      </div>
 
 

@@ -67,7 +67,7 @@ else{
   grid-template-rows: 1fr;
 }
 .card {
-  width:600px;
+  width:650px;
   margin-bottom: 1rem;
   border-radius: 5px;
 }

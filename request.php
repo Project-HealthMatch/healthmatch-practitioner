@@ -67,7 +67,7 @@ else{
   grid-template-rows: 1fr;
 }
 .card {
-  width:700px;
+  width:600px;
   margin-bottom: 1rem;
   border-radius: 5px;
 }
@@ -90,7 +90,7 @@ input{
 }
 
 .back{
-  width: 750px;
+  width: 550px;
   padding: 5rem;
   height: 700px;
   text-align:center;

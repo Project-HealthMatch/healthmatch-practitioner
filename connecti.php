@@ -1,20 +1,3 @@
-<?
-session_start();
-
-if($_SESSION["user"]==true){
-
-}
-else{
-    header("Location: index.php");
-}
-?>
-
-
-
-
-
-
-
 <?php
 
 session_start();
@@ -48,7 +31,7 @@ session_start();
        $row = $result->fetch_assoc();}
        $sql = "DELETE  FROM booking WHERE id = {$_REQUEST['id']}";
        if($conn->query($sql) == TRUE){
-         echo "sucessful";
+         echo "successful";
        }
        else{
          echo "unable to delete";
@@ -56,6 +39,6 @@ session_start();
 
 
        echo "Done";
-      header("Location:submitted.php");
+      header("Location:requestsubmitted.php");
        $stmt->close();
        $conn->close();}

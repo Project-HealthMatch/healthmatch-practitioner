@@ -67,7 +67,7 @@ else{
   grid-template-rows: 1fr;
 }
 .card {
-  width:700px;
+  width:650px;
   margin-bottom: 1rem;
   border-radius: 5px;
 }
@@ -90,7 +90,7 @@ input{
 }
 
 .back{
-  width: 750px;
+  width: 600px;
   padding: 5rem;
   height: 700px;
   text-align:center;
@@ -189,7 +189,7 @@ body {
 </div>
        <div class="col-sm-4 mb-5">
 <?php
-$conn = mysqli_connect("localhost", "root", "root", "appointment");
+$conn = mysqli_connect("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020", "appointment");
   $sql = "SELECT * FROM `booking`";
 $result = $conn->query($sql);
 

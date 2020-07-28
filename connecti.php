@@ -20,7 +20,7 @@ session_start();
      else
 
      {
-       $stmt = $conn->prepare("insert into acceptappointment(id, email,docemail )
+       $stmt = $conn->prepare("insert into acceptappoiintment(id, email,docemail )
        values(?, ?, ?)");
       //$b=implode(",",$slot);
        $stmt->bind_param("sss",$id,$email, $docemail);

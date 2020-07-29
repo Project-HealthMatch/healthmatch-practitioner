@@ -261,8 +261,13 @@ th{
 i{
         margin-right:0.3rem;
       }
+@media(max-width:900px)
+{
 
-
+.topnav{
+  font-size:0.8rem;
+}
+}
 
     </style>
     <div class="topnav">
@@ -274,6 +279,8 @@ i{
 
 
   <a href="<?php echo "request.php"; ?>"><i class="fa fa-user"></i>Appoinments</a>
+
+    <a href="<?php echo "reset.php"; ?>"><i class="fa fa-tasks"></i>Change Password</a>
      </div>
 
 

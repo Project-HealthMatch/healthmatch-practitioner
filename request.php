@@ -178,6 +178,7 @@ body {
 
 
   <a href="<?php echo "request.php"; ?>"><i class="fa fa-user"></i>Appoinments</a>
+             <a href="<?php echo "reset.php"; ?>"><i class="fa fa-tasks"></i>Change Password</a>
      </div>
      </div>
        </head>

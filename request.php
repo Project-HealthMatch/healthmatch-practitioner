@@ -268,7 +268,7 @@ if(isset($_REQUEST['view']))
 
 
     <div class = "float-right">
-  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="accept">'; ?>
+  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="submit">'; ?>
   </div>
 
 </form>
@@ -285,7 +285,7 @@ if(isset($_REQUEST['view']))
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
             const form = document.forms['google-sheet']
           
-            form.addEventListener('accept', e => {
+            form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Thank you for accepting!"))

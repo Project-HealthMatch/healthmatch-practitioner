@@ -292,16 +292,8 @@ if(isset($_REQUEST['view']))
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => 
-                var result = confirm( "Thank you for accepting!Click OK to proceed." );
-
-if ( result ) {
-window.location = "connecti.php";
-}
-} else {
-    
-}
-                )
+                .then(response => alert("Thank you for accepting!Click OK to proceed."))
+                
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

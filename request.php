@@ -272,7 +272,7 @@ if(isset($_REQUEST['view']))
 
 
     <div class = "float-right">
-  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="submit">'; ?>
+  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="submit" onclick="myFunction()">'; ?>
   </div>
 
 </form>
@@ -292,8 +292,17 @@ if(isset($_REQUEST['view']))
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thank you for accepting!Click OK to proceed."))
-                
+                .then(response => 
+                function myFunction() {
+ var result =  confirm("Thank you for accepting!Click OK to proceed.");
+if ( result ) {
+    header('Location: connecti.php');
+} else {
+    // the user clicked cancel or closed the confirm dialog.
+}
+
+}
+                )
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

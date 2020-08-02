@@ -292,18 +292,13 @@ if(isset($_REQUEST['view']))
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        
-        
-
-        var text;
-var z = confirm("Thank you for accepting!");
-if (z == true) {
-  window.location.replace("connecti.php");
+                .then(response => 
+             
+  confirm("Thank you for accepting!");
   
-} else {
-    text = "Cancel is pressed!";
-}
-              
+
+                )
+                .catch(error => console.error('Error!', error.message))
             })
           </script>
 

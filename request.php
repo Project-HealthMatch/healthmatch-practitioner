@@ -90,7 +90,7 @@ input{
 }
 
 .back{
-  width: 600px;
+  width: 99%;
   padding: 5rem;
   height: 700px;
   text-align:center;

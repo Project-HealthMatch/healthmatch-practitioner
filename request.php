@@ -272,7 +272,7 @@ if(isset($_REQUEST['view']))
 
 
     <div class = "float-right">
-  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="submit" onclick="myFunction()">'; ?>
+  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" id="demo" name ="submit" onclick="myFunction()">'; ?>
   </div>
 
 </form>
@@ -301,6 +301,12 @@ if(isset($_REQUEST['view']))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
+
+          <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+</script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

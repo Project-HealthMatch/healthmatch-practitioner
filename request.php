@@ -294,8 +294,8 @@ if(isset($_REQUEST['view']))
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
              
- alert("Thank you for accepting!")
-  
+ alert("Thank you for accepting!");
+  window.location='connecti.php';
 
                 )
                 .catch(error => console.error('Error!', error.message))

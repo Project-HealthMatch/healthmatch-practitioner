@@ -293,15 +293,10 @@ if(isset($_REQUEST['view']))
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
-                function myFunction() {
- var result =  confirm("Thank you for accepting!Click OK to proceed.");
-if ( result ) {
-    header('Location: connecti.php');
-} else {
-    // the user clicked cancel or closed the confirm dialog.
-}
+  confirm("Thank you for accepting!Click OK to proceed.")
 
-}
+
+
                 )
                 .catch(error => console.error('Error!', error.message))
             })

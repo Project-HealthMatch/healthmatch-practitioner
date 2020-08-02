@@ -294,14 +294,8 @@ if(isset($_REQUEST['view']))
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
   
-confirm("Thank you for accepting!Click OK to proceed.");
-if (true) {
-window.location.href = "connecti.php";;
-} else {
-  txt = "You pressed Cancel!";
-}
-
-                )
+alert("Thank you for accepting!Click OK to proceed.");
+        )
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

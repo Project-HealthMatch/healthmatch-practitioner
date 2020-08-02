@@ -304,7 +304,7 @@ if(isset($_REQUEST['view']))
 
           <script>
 function myFunction() {
-  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+  document.getElementById("demo").innerHTML = window.location.replace("connecti.php");
 }
 </script>
 

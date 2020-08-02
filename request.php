@@ -244,7 +244,7 @@ if(isset($_REQUEST['view']))
 <div class ="back">
   <div class = "form">
 
-  <form action="connecti.php" method="POST">
+  <form action="connecti.php" method="POST" name="google-sheet">
 
     <label for = "id"> PATIENT ID </label>
     <input type="text" class="form-control" id="id"
@@ -277,3 +277,22 @@ if(isset($_REQUEST['view']))
   </div>
 </div>
 </div>
+
+
+</body>
+
+     <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('accept', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

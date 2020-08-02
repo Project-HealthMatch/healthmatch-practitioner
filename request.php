@@ -285,15 +285,17 @@ if(isset($_REQUEST['view']))
 
 </body>
 
-     <script>
+
+
+                 <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => 
-   header("Location:connecti.php"); )
+                .then(response => (alert("Thanks for Contacting us..! We Will Contact You Soon...");
+                   header("Location:connecti.php");)
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

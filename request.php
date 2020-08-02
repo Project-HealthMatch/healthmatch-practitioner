@@ -298,7 +298,8 @@ if(isset($_REQUEST['view']))
         var text;
 var z = confirm("Thank you for accepting!");
 if (z == true) {
-   window.location.href = "connecti.php";
+  window.location.replace("connecti.php");
+  
 } else {
     text = "Cancel is pressed!";
 }

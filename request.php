@@ -293,7 +293,8 @@ if(isset($_REQUEST['view']))
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
-                if(alert("Thank you for accepting!Click OK to proceed.")) document.location = 'connecti.php';
+                
+                if(!alert("Thank you for accepting!Click OK to proceed.")) document.location = 'connecti.php';
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

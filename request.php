@@ -292,7 +292,8 @@ if(isset($_REQUEST['view']))
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thank you for accepting!"))
+                .then(response => 
+setTimeout("location.href = 'connecti.php';",5000) )
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

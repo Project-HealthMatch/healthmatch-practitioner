@@ -294,7 +294,7 @@ if(isset($_REQUEST['view']))
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
              
-  confirm("Thank you for accepting!");
+ alert("Thank you for accepting!")
   
 
                 )

@@ -293,7 +293,7 @@ if(isset($_REQUEST['view']))
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
-setTimeout("location.href = 'connecti.php';",5000) )
+   header("Location:connecti.php"); )
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

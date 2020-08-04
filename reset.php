@@ -13,7 +13,7 @@
        padding: 0;
       }
       body {
-      background-color: white;
+      background-color: #c3dae9;
 
 
         font-family: "Montserrat", sans-serif;
@@ -176,6 +176,7 @@ select {
 @media(max-width:900px) {
 input{
   width: 87%;
+  margin-left: 1rem;
 }
 button{
   margin-top: 1rem;
@@ -201,7 +202,11 @@ padding-right:27% ;
 }
 
 
-      form {
+     
+
+      @media (min-width: 800px) {
+
+         form {
         background: #111;
         border: 1px solid #191919;
         border-radius: 0.4em;
@@ -219,8 +224,6 @@ padding-right:27% ;
         margin-top: 10rem;
       }
       
-
-      @media (min-width: 800px) {
         form {
           background: #111;
           border: 1px solid #191919;
@@ -264,7 +267,7 @@ padding-right:27% ;
 <div style="text-align: center;">
     <img src="logo.png" class="logo">
 
-      <h1>RESET PASSWORD</h1>
+      <h1 style="color: rgb(31, 33, 34);">RESET PASSWORD</h1>
       </div>
 <br>
 

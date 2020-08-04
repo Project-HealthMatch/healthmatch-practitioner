@@ -269,6 +269,14 @@ i{
 .topnav{
   font-size:0.8rem;
 }
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
 }
 	    
 	   
@@ -287,6 +295,8 @@ i{
        width: 35%;
        border: solid 0.05rem black;
      }  
+				    
+			
 
 }
   

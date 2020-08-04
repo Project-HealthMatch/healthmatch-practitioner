@@ -190,7 +190,7 @@ body {
 </div>
        <div class="col-sm-4 mb-5">
 <?php
-$conn = mysqli_connect("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020", "appointment");
+$conn = mysqli_connect("localhost","root","root", "appointment");
   $sql = "SELECT * FROM `booking`";
 $result = $conn->query($sql);
 
@@ -244,7 +244,7 @@ if(isset($_REQUEST['view']))
 <div class ="back">
   <div class = "form">
 
-  <form action="connecti.php" method="POST" name="google-sheet">
+  <form action="connecti.php" method="POST">
 
     <label for = "id"> PATIENT ID </label>
     <input type="text" class="form-control" id="id"
@@ -253,13 +253,9 @@ if(isset($_REQUEST['view']))
         <label for = "date"> APPOINTMENT DATE </label>
         <input type="text" class="form-control" id="date"
         name = "date" value = "<?php if (isset($row['date'])) echo $row['date'];?>" readonly>
-        <label for = "timezoneid"> TIMEZONE </label>
-        <input type="text" class="form-control" id="timezoneid"
-        name = "timezoneid" value = "<?php if (isset($row['timezoneid'])) echo $row['timezoneid'];?>"readonly>
-
-         <label for = "date"> SLOT </label>
+        <label for = "slot"> SLOT </label>
         <input type="text" class="form-control" id="slot"
-        name = "slot" value = "<?php if (isset($row['slot'])) echo $row['slot'];?>" readonly>
+        name = "slot" value = "<?php if (isset($row['slot'])) echo $row['slot'];?>"readonly>
         <label for = "optional"> PATIENT'S NOTE </label>
         <input type="text" class="form-control" id="optional"
         name = "optional" value = "<?php if (isset($row['optional'])) echo $row['optional'];?>"readonly>
@@ -272,7 +268,7 @@ if(isset($_REQUEST['view']))
 
 
     <div class = "float-right">
-  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" " name ="submit" >'; ?>
+  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="accept">'; ?>
   </div>
 
 </form>
@@ -281,27 +277,3 @@ if(isset($_REQUEST['view']))
   </div>
 </div>
 </div>
-
-
-</body>
-
-     <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => 
-             
- alert("Thank you for accepting!")
-  
-
-                )
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</html>

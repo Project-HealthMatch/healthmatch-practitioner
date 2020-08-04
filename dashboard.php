@@ -267,7 +267,7 @@ i{
 {
 
 .topnav{
-  font-size:0.8rem;
+  font-size:1rem;
 }
 .topnav a {
   float: left;

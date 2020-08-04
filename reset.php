@@ -276,7 +276,7 @@ padding-right:27% ;
       <div class="form-container sign-up-container">
          
          <br>
-        <form action="reset.php" method="POST">
+        <form action="resetpassword.php" method="POST">
            
      
             <input id="Email" name="Email" type="email" placeholder="Email" />

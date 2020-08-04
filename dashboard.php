@@ -268,6 +268,15 @@ i{
   font-size:0.8rem;
 }
 }
+	    
+	    @media(min-width:900px)
+		    {
+			    select{
+				    
+				    width:50%;
+			    }
+	    }
+			    
 
     </style>
     <div class="topnav">

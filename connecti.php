@@ -231,10 +231,10 @@ session_start();
      else
 
      {
-       $stmt = $conn->prepare("insert into acceptappoiintment(date, slot, id, email,docemail )
+       $stmt = $conn->prepare("insert into acceptappoiintment(date, slot, id, email, docemail)
        values(?, ?, ? ,?, ?)");
       //$b=implode(",",$slot);
-       $stmt->bind_param("sssss",$date,$slot,$id,$email, $docemail);
+       $stmt->bind_param("sssss",$date,$slot,$id,$email,$docemail);
        $stmt->execute();
        if($stmt == TRUE){
        $sql = "SELECT * FROM booking WHERE  id = {$_REQUEST['id']}";

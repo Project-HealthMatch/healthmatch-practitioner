@@ -219,10 +219,10 @@ session_start();
 
      $docemail = $_POST['docemail'];
 
+$emptyarray=array();
 
 
-
-     $conn = new mysqli("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020","appointment");
+     $conn = new mysqli("localhost","root","root","appointment");
      if($conn->connect_error)
      {
        die('connection failed :' .$conn->connect_error);
@@ -231,24 +231,62 @@ session_start();
      else
 
      {
-       $stmt = $conn->prepare("insert into acceptappoiintment(date, slot, id, email, docemail)
+       $stmt = $conn->prepare("insert into acceptappoiintment(date, slot, id, email,docemail )
        values(?, ?, ? ,?, ?)");
       //$b=implode(",",$slot);
-       $stmt->bind_param("sssss",$date,$slot,$id,$email,$docemail);
+       $stmt->bind_param("sssss",$date,$slot,$id,$email, $docemail);
        $stmt->execute();
        if($stmt == TRUE){
        $sql = "SELECT * FROM booking WHERE  id = {$_REQUEST['id']}";
        $result = $conn->query($sql);
        $row = $result->fetch_assoc();}
        $sql = "DELETE  FROM booking WHERE id = {$_REQUEST['id']}";
+
        if($conn->query($sql) == TRUE){
 
        }
-       else{
-         echo "unable to delete";
-       }
+       $link = "SELECT * FROM bookings WHERE date='$date' AND email = '$docemail'";
+     if($result = mysqli_query($conn, $link)){
+  if(mysqli_num_rows($result) > 0){
 
-              echo '<div style="text-align: center;">';
+
+
+      while($row = mysqli_fetch_array($result)){
+
+          $str =(explode(",",$row['slot']));
+
+      $emptyarray=array_merge($emptyarray,$str);
+
+
+
+
+      }
+      sort($emptyarray);
+
+$i=0 ;
+$j=0;
+$k=0;
+$n=sizeof($emptyarray);
+
+for($i=0; $i<$n; $i++)
+   {
+      /* If any duplicate found */
+           if($emptyarray[$i] == $slot)
+           {
+unset($emptyarray[$i]);
+
+           }
+
+   }
+ }
+
+}
+
+
+
+$slt= implode(",",$emptyarray);
+
+          echo '<div style="text-align: center;">';
                        echo '<form method="POST" name="google-sheet">';
 
 
@@ -281,11 +319,7 @@ session_start();
 
 
 
-       $stmt->close();
-
-
-
-       $conn->close();}
+      }
        ?>
 
      <script>
@@ -305,5 +339,8 @@ session_start();
             })
           </script>
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+          </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+          </script>
+</html>

@@ -172,7 +172,7 @@ body {
 <div class="topnav">
         <div style="text-align:right;" >
 
-  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Home</a>
+  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Slot</a>
 
   <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
 

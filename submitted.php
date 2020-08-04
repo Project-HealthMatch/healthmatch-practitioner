@@ -109,6 +109,12 @@ else{
           Pick Slots for another date
         </button></a
       >
+        
+         <a href="<?php echo "request.php"; ?>">
+        <button class="homebtn" :hover>
+         <i class="fa fa-people"></i> Accept Appointment
+        </button>
+      </a>
     <a href="<?php echo "logout.php"; ?>">
         <button class="homebtn" :hover>
          <i class="fa fa-power-off"></i> Logout

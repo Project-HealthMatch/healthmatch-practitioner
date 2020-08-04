@@ -275,6 +275,10 @@ i{
 				    
 				    width:50%;
 			    }
+			    
+			     input[type="text"] {
+				 width:50%;    
+			    }
 	    }
 			    
 

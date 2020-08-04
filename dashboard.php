@@ -285,6 +285,7 @@ i{
         width: 50%;
         margin-left: 25%;
         border: solid 0.05rem black;
+	     border-radius: 5px;
       }
       select{
         width:30%;
@@ -303,6 +304,7 @@ i{
 	    .date{
        
         border: solid 0.05rem black;
+		     border-radius: 5px;
       }
 			    
 

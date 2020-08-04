@@ -231,7 +231,7 @@ session_start();
      else
 
      {
-       $stmt = $conn->prepare("insert into acceptappoiintment(date, slot, id, email,docemail )
+       $stmt = $conn->prepare("insert into acceptappointment(date, slot, id, email,docemail )
        values(?, ?, ? ,?, ?)");
       //$b=implode(",",$slot);
        $stmt->bind_param("sssss",$date,$slot,$id,$email, $docemail);

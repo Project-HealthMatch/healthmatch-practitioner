@@ -168,6 +168,17 @@ body {
         margin-right:0.3rem;
       }
 
+
+      @media(max-width:900px)
+      {
+
+        .topnav a {
+ 
+  font-size: 1.2rem;
+}
+
+      }
+
 </style>
 <div class="topnav">
         <div style="text-align:right;" >

@@ -265,7 +265,7 @@ body {
       }
       }
    
-    @media(min-width:900px)
+    @media(max-width:900px)
      {
 
        .buttongrid{

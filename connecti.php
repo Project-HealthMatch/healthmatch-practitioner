@@ -274,7 +274,7 @@ body {
         grid-template-columns: 1fr ;
         grid-template-rows: 1fr 1fr 1fr;
         margin-left: 5%;
-          margin-top:15%;
+          margin-top:25%;
 
       }
       }

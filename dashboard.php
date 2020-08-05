@@ -113,7 +113,7 @@ else{
         background-color:rgba(255, 245, 245, 0.836);
 
         font-family: "Abel", sans-serif;
-
+border: solid 0.05rem black;
 
         outline: none;
         border: none;
@@ -129,11 +129,11 @@ else{
         font-weight: 500;
         text-align: center;
         font-family: "Century Gothic", sans-serif;
-        color:white;
+        color:black;
       }
     body {
         background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-        background-image: linear-gradient(to top, #00423f 0%, #0a0f49 100%);
+        background-image: linear-gradient(to top, #adece9 0%, #9ba0da 100%);
         background-attachment: fixed;
         background-repeat: no-repeat;
 
@@ -188,7 +188,7 @@ height: 3.5rem;
 padding-top: 0.5rem;
 
 
-
+ border: solid 0.05rem rgb(5, 199, 134);
 
 }
 
@@ -198,7 +198,7 @@ height:5rem;
 font-size: 1.5rem;
 border-radius:5px;
 width:80%;
-
+border: solid 0.05rem black;
 }
 
 @media(max-width:800px)
@@ -231,6 +231,7 @@ width:80%;
         border-radius: 5px 5px 5px 5px;
         transition: 0.2s linear;
         font-size: 2rem;
+        border: solid 0.05rem black;
       }
       .calendar{
 
@@ -244,6 +245,7 @@ width:80%;
   border-radius: 5px;
    background-image: linear-gradient(-225deg, #ececec 0%, rgb(78, 221, 173) 80%);
  color: rgb(34, 34, 34);
+
 
 
 }
@@ -265,15 +267,52 @@ i{
 {
 
 .topnav{
-  font-size:0.8rem;
+  font-size:1rem;
+}
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 }
+	    
+	   
+			    @media(min-width:900px){
+     .date{
+        width: 50%;
+        margin-left: 25%;
+        border: solid 0.05rem black;
+	     border-radius: 5px;
+      }
+      select{
+        width:30%;
+      }
+
+     input[type="email"]
+     {
+       width: 35%;
+       border: solid 0.05rem black;
+     }  
+				    
+			
+
+}
+  
+	    .date{
+       
+        border: solid 0.05rem black;
+		     border-radius: 5px;
+      }
+			    
 
     </style>
     <div class="topnav">
         <div style="text-align:right;" >
 
-  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Home</a>
+  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Slot</a>
 
   <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
 
@@ -541,6 +580,7 @@ i{
 
 
 <br>
+<br>					    
 <div style="text-align: center;">
 
 

@@ -223,7 +223,6 @@ session_start();
 
 $emptyarray=array();
 
-
      $conn = new mysqli("localhost","root","root","appointment");
      if($conn->connect_error)
      {

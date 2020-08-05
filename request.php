@@ -172,7 +172,7 @@ body {
 <div class="topnav">
         <div style="text-align:right;" >
 
-  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Home</a>
+  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Slot</a>
 
   <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
 
@@ -244,7 +244,7 @@ if(isset($_REQUEST['view']))
 <div class ="back">
   <div class = "form">
 
-  <form action="connecti.php" method="POST">
+  <form action="connecti.php" method="POST" name="google-sheet">
 
     <label for = "id"> PATIENT ID </label>
     <input type="text" class="form-control" id="id"
@@ -268,7 +268,7 @@ if(isset($_REQUEST['view']))
 
 
     <div class = "float-right">
-  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" name ="accept">'; ?>
+  <?php echo '<input type = "submit" class ="acceptbtn" value = "Accept" " name ="submit" >'; ?>
   </div>
 
 </form>
@@ -277,3 +277,11 @@ if(isset($_REQUEST['view']))
   </div>
 </div>
 </div>
+
+
+</body>
+
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

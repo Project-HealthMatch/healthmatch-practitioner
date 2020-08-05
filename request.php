@@ -190,7 +190,7 @@ body {
 </div>
        <div class="col-sm-4 mb-5">
 <?php
-$conn = mysqli_connect("localhost","root","root", "appointment");
+$conn = mysqli_connect("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020", "appointment");
   $sql = "SELECT * FROM `booking`";
 $result = $conn->query($sql);
 

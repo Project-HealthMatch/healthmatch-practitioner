@@ -306,7 +306,7 @@
         font-weight: normal;
       }
 
-      input[type="username"],
+      input[type="email"],
       input[type="password"] {
         background: linear-gradient(#1f2124, #27292c);
         border: 1px solid #222;
@@ -376,10 +376,10 @@
     <form action="login.php" method="post">
       <h1>WELCOME</h1>
       <input
-        type="username"
+        type="email"
         id="username"
         name="username"
-        placeholder="Username"
+        placeholder="Email"
       />
 
       <input

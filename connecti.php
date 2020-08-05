@@ -222,6 +222,7 @@ body {
         position: relative;
         overflow: hidden;
         color: black;
+        margin-left:1rem;
       }
 
       @media (min-width: 600px) {
@@ -248,12 +249,21 @@ body {
         background: #51a09b;
       }
 
-      .buttongrid{
+     
+
+      @media(min-width:900px)
+     {
+
+     }  .buttongrid{
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
+
+      margin-left:3rem;
       }
+      }
+
 
 </style>
 </head>

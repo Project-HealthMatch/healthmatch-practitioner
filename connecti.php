@@ -260,7 +260,7 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
 
-      margin-left:3rem;
+      margin-left:10%;
       }
       }
 

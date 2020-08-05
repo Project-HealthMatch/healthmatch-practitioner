@@ -254,7 +254,7 @@ body {
       @media(min-width:900px)
      {
 
-     }  .buttongrid{
+       .buttongrid{
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

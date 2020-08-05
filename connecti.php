@@ -230,7 +230,7 @@ body {
           border: 1px solid white;
           border-radius: 5px;
           margin: 1rem;
-          width: 20%;
+          width: 80%;
           height: 5rem;
           font-size: 20px;
           font-family: "montserrat";
@@ -259,8 +259,8 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
+        margin-left: 5%;
 
-      margin-left:10%;
       }
       }
 
@@ -388,7 +388,10 @@ $slot=$slt;
       }
        ?>
 
+
        <div id="initiallyHiddenBlock">
+
+        <div class="buttongrid">
  <a href="<?php echo "request.php"; ?>">
         <button class="homebtn" :hover>
          <i class="fa fa-people"></i> Accept Appointment
@@ -411,7 +414,7 @@ $slot=$slt;
         </button>
       </a>
        </div>
-
+</div>
 
 </body>
      <script>

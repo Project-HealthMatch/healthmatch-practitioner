@@ -13,7 +13,7 @@ session_start();
   }
   else{
     $stmt = $con->prepare("select * from hac_user where username= ?");
-    $stmt->bind_param("i", $username);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt_result = $stmt->get_result();
     if($stmt_result ->num_rows > 0){
@@ -23,10 +23,10 @@ session_start();
         echo "<h2>LOGIN SUCCESSS</h2>";
         header("Location:dashboard.php");}
      else{
-       echo "<h2> INVALID EMAIL OR PASSWORD</h2>";
+      echo '<script>alert("Invalid Password or Email!")</script>'; 
     }}
     else{
-    echo "<h2>invalid Email or password</h2>";
+   echo '<script>alert("Invalid Password or Email!")</script>'; 
     }
 
   }

@@ -574,7 +574,7 @@ i{
 </div>
 <div style="text-align: center;">
 <h3 class="headerdoctor">E-mail:</h3>
-            <input type="email" name="email"  value = "<?php  echo $_SESSION["user"];?>" />
+            <input type="email" name="email" value = "<?php  echo $_SESSION["user"];?>" />
 
 
 

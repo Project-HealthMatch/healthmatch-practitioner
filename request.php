@@ -263,7 +263,7 @@ if(isset($_REQUEST['view']))
         <input type="email" class="form-control" id="email"
         name = "email" value = "<?php if (isset($row['email'])) echo $row['email'];?>" readonly>
         <label for = "email"> DOCTOR'S EMAIL </label>
-        <input type="email" name="email" value = "<?php  echo $_SESSION["user"];?>" />
+        <input type="email"  class="form-control" name="email" value = "<?php  echo $_SESSION["user"];?>"  readonly>
 
 
     <div class = "float-right">

@@ -353,7 +353,7 @@ $slot=$slt;
 */
 
           echo '<div style="text-align: center;">';
-                       echo '<form method="POST" name="google-sheet">';
+                       echo '<form method="POST" name="google-sheet" id="HideBlock">';
 
 
 
@@ -440,6 +440,7 @@ $slot=$slt;
      $(document).ready(function() {
       $('#showHiddenBlock').click(function() {
           $('#initiallyHiddenBlock').show();
+         $('#HideBlock').hide();
       });
   });
   </script>

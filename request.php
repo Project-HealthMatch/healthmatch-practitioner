@@ -90,7 +90,7 @@ input{
 }
 
 .back{
-  width: 600px;
+  width: 99%;
   padding: 5rem;
   height: 700px;
   text-align:center;
@@ -190,7 +190,7 @@ body {
 </div>
        <div class="col-sm-4 mb-5">
 <?php
-$conn = mysqli_connect("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020", "appointment");
+$conn = mysqli_connect("localhost","root","root", "appointment");
   $sql = "SELECT * FROM `booking`";
 $result = $conn->query($sql);
 
@@ -253,9 +253,9 @@ if(isset($_REQUEST['view']))
         <label for = "date"> APPOINTMENT DATE </label>
         <input type="text" class="form-control" id="date"
         name = "date" value = "<?php if (isset($row['date'])) echo $row['date'];?>" readonly>
-        <label for = "timezoneid"> TIMEZONE </label>
-        <input type="text" class="form-control" id="timezoneid"
-        name = "timezoneid" value = "<?php if (isset($row['timezoneid'])) echo $row['timezoneid'];?>"readonly>
+        <label for = "slot"> SLOT </label>
+        <input type="text" class="form-control" id="slot"
+        name = "slot" value = "<?php if (isset($row['slot'])) echo $row['slot'];?>"readonly>
         <label for = "optional"> PATIENT'S NOTE </label>
         <input type="text" class="form-control" id="optional"
         name = "optional" value = "<?php if (isset($row['optional'])) echo $row['optional'];?>"readonly>

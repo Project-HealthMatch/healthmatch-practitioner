@@ -364,6 +364,7 @@ i{
               Please select your timezone:
             </h3>
 <div style="text-align: center;">
+	<select name="timeZoneId">
 <option gmtAdjustment="GMT-12:00" useDaylightTime="0" value="International Date Line West (GMT-12:00)">International Date Line West (GMT-12:00) </option>
 	<option  gmtAdjustment="GMT-11:00" useDaylightTime="0" value="Midway Island, Samoa (GMT-11:00)"> Midway Island, Samoa (GMT-11:00)</option>
 	<option  gmtAdjustment="GMT-09:00" useDaylightTime="1" value="Alaska (GMT-09:00)"> </option>

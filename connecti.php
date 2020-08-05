@@ -204,6 +204,57 @@ body {
 
       }
 
+       #initiallyHiddenBlock {
+          display: none;
+      }
+      .homebtn {
+        border: 1px solid white;
+        background-color: rgb(105, 223, 197);
+        margin: 0.5rem;
+        width: 90%;
+        height: 5rem;
+        font-size: 20px;
+        font-family: "montserrat";
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        color: black;
+      }
+
+      @media (min-width: 600px) {
+        .homebtn {
+          border: 1px solid white;
+          border-radius: 5px;
+          margin: 1rem;
+          width: 20%;
+          height: 5rem;
+          font-size: 20px;
+          font-family: "montserrat";
+          font-weight: 600;
+          cursor: pointer;
+          color: black;
+          background-color: rgb(105, 223, 197);
+          transition: 0.8s;
+          position: relative;
+          overflow: hidden;
+        }
+      }
+
+      .homebtn:hover {
+        color: white;
+        background: #51a09b;
+      }
+
+      .buttongrid{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+      }
+
 </style>
 </head>
 <body>
@@ -285,7 +336,6 @@ unset($emptyarray[$i]);
 
 
 /*$slt= implode(",",$emptyarray);
-
 $link = "SELECT * FROM bookings WHERE date='$date' AND email = '$docemail'";
    {
 $slot=$slt;
@@ -317,8 +367,8 @@ $slot=$slt;
 
 
 
-                     echo'    <div>';
-                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit">';
+                     echo'    <div >';
+                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit" id="showHiddenBlock">';
                    echo'    </div>';
 
                    echo'  </form>';
@@ -327,6 +377,26 @@ $slot=$slt;
 
       }
        ?>
+
+       <div id="initiallyHiddenBlock">
+
+ <a href="<?php echo "dashboard.php"; ?>">
+        <button class="homebtn" :hover>
+          Pick Slots for another date
+        </button></a>
+      <a href="<?php echo "request.php"; ?>">
+        <button class="homebtn" :hover>
+         <i class="fa fa-people"></i> Accept Appointment
+        </button>
+      </a>
+    <a href="<?php echo "logout.php"; ?>">
+        <button class="homebtn" :hover>
+         <i class="fa fa-power-off"></i> Logout
+        </button>
+      </a>
+       </div>
+
+
 </body>
      <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
@@ -347,4 +417,11 @@ $slot=$slt;
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</html>
+ <script>
+     $(document).ready(function() {
+      $('#showHiddenBlock').click(function() {
+          $('#initiallyHiddenBlock').show();
+      });
+  });
+  </script>
+  </html>

@@ -7,7 +7,7 @@ $new = $_POST['new'];
 $conf = $_POST['conf'];
 
 
-  $conn = new mysqli("localhost","root","root","hac_db");
+  $conn = new mysqli("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020","hac_db");
   if($conn->connect_error){
 
     die("Failed to connect :".$con->connect_error);

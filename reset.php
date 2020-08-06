@@ -279,9 +279,9 @@ padding-right:27% ;
         <form action="resetpassword.php" method="POST">
            
      
-            <input id="Email" name="Email" type="email" placeholder="Email" />
-            <input id="Password" name="Password" type="password" placeholder="Enter Old Password" />
-            <input id="newf" name="newf" type="newf" placeholder="Enter New Password" />
+            <input id="Email" name="username" type="text" placeholder="Username" />
+            <input id="Password" name="password" type="password" placeholder="Enter Old Password" />
+            <input id="newf" name="new" type="newf" placeholder="Enter New Password" />
             <input id=conf name="conf" type="conf" placeholder="Confirm New Password" />
 
 

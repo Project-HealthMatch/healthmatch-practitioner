@@ -204,85 +204,7 @@ body {
 
       }
 
-       #initiallyHiddenBlock {
-          display: none;
-      }
-      .homebtn {
-        border: 1px solid white;
-        background-color: rgb(105, 223, 197);
-        margin: 0.5rem;
-        width: 90%;
-        height: 5rem;
-        font-size: 20px;
-        font-family: "montserrat";
-        font-weight: 600;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: 0.8s;
-        position: relative;
-        overflow: hidden;
-        color: black;
-        margin-left:1rem;
-      }
-
-      @media (min-width: 600px) {
-        .homebtn {
-          border: 1px solid white;
-          border-radius: 5px;
-          margin: 1rem;
-          width: 80%;
-          height: 5rem;
-          font-size: 20px;
-          font-family: "montserrat";
-          font-weight: 600;
-          cursor: pointer;
-          color: black;
-          background-color: rgb(105, 223, 197);
-          transition: 0.8s;
-          position: relative;
-          overflow: hidden;
-        }
-      }
-
-      .homebtn:hover {
-        color: white;
-        background: #51a09b;
-      }
-
-     
-
-      @media(min-width:900px)
-     {
-
-       .buttongrid{
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        margin-left: 5%;
-          margin-top:15%;
-
-      }
-      }
-   
-    @media(max-width:900px)
-     {
-
-       .buttongrid{
-
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin-left: 5%;
-          margin-top:25%;
-
-      }
-      }
-
-
 </style>
-</head>
-<body>
 <?php
 
 session_start();
@@ -296,10 +218,15 @@ session_start();
      $email = $_POST['email'];
 
      $docemail = $_POST['docemail'];
+     $emptyarray = array();
+     $n=0;
+     $i=0;
+     $m= array();
+     $b;
 
-$emptyarray=array();
 
-     $conn = new mysqli("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020","appointment");
+
+     $conn = new mysqli("localhost","root","root","appointment");
      if($conn->connect_error)
      {
        die('connection failed :' .$conn->connect_error);
@@ -318,57 +245,50 @@ $emptyarray=array();
        $result = $conn->query($sql);
        $row = $result->fetch_assoc();}
        $sql = "DELETE  FROM booking WHERE id = {$_REQUEST['id']}";
-
        if($conn->query($sql) == TRUE){
+      $sql=(" SELECT * FROM bookings WHERE date='$date' AND email = '$docemail' ");
+      if($result = mysqli_query($conn, $sql)){
+      if(mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            $str =(explode(",",$row['slot']));
 
-       }
-       $link = "SELECT * FROM bookings WHERE date='$date' AND email = '$docemail'";
-     if($result = mysqli_query($conn, $link)){
-  if(mysqli_num_rows($result) > 0){
-
-
-
-      while($row = mysqli_fetch_array($result)){
-
-          $str =(explode(",",$row['slot']));
-
-      $emptyarray=array_merge($emptyarray,$str);
+      
 
 
 
+            echo "</tr>";
+        }
 
-      }
-      sort($emptyarray);
+$n = sizeof($emptyarray);
+for($i=0;$i<$n;$i++)
+{ if ($emptyarray[$i] == $slot){
+$m=str_replace($slot,'',$emptyarray);
 
-$i=0 ;
-$j=0;
-$k=0;
-$n=sizeof($emptyarray);
+}}
+print_r($m);
+$b=implode(",",$m);
 
-for($i=0; $i<$n; $i++)
-   {
-      /* If any duplicate found */
-           if($emptyarray[$i] == $slot)
-           {
-unset($emptyarray[$i]);
-
-           }
-
-   }
- }
-
+$sql = "UPDATE bookings SET slot='$b' WHERE email= '$docemail' AND date ='$date'";
+if(mysqli_query($conn, $sql)){
+    echo "Record was updated successfully.";
+} else {
+    echo "ERROR: Could not able to execute $sql. "
+                            . mysqli_error($conn);
 }
 
 
-/*$slt= implode(",",$emptyarray);
-$link = "SELECT * FROM bookings WHERE date='$date' AND email = '$docemail'";
-   {
-$slot=$slt;
-}
-*/
 
-          echo '<div style="text-align: center;">';
-                       echo '<form method="POST" name="google-sheet" id="HideBlock">';
+
+}}
+    else {
+      echo "accepting booking ";
+    }
+  }else { echo "false";}
+
+
+              echo '<div style="text-align: center;">';
+                       echo '<form method="POST" name="google-sheet">';
 
 
 
@@ -392,46 +312,21 @@ $slot=$slt;
 
 
 
-                     echo'    <div >';
-                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit" id="showHiddenBlock">';
+                     echo'    <div>';
+                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit">';
                    echo'    </div>';
 
                    echo'  </form>';
 
 
 
-      }
+       $stmt->close();
+
+
+
+       $conn->close();}
        ?>
 
-
-       <div id="initiallyHiddenBlock">
-
-        <div class="buttongrid">
- <a href="<?php echo "request.php"; ?>">
-        <button class="homebtn" :hover>
-         <i class="fa fa-people"></i> Accept Appointment
-        </button>
-      </a>
-
-
-
-
-     <a href="<?php echo "dashboard.php"; ?>">
-        <button class="homebtn" :hover>
-         <i class="fa fa-people"></i> Pick Slots
-        </button>
-      </a>
-
-     
-    <a href="<?php echo "logout.php"; ?>">
-        <button class="homebtn" :hover>
-         <i class="fa fa-power-off"></i> Logout
-        </button>
-      </a>
-       </div>
-</div>
-
-</body>
      <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
             const form = document.forms['google-sheet']
@@ -451,12 +346,3 @@ $slot=$slt;
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script>
-     $(document).ready(function() {
-      $('#showHiddenBlock').click(function() {
-          $('#initiallyHiddenBlock').show();
-         $('#HideBlock').hide();
-      });
-  });
-  </script>
-  </html>

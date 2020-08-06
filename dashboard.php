@@ -5,7 +5,7 @@ if($_SESSION["user"]==true){
 
 }
 else{
-    header("Location: index.html");
+    header("Location: index.php");
 }
 ?>
 
@@ -278,8 +278,8 @@ i{
   font-size: 1.2rem;
 }
 }
-
-
+	    
+	   
 			    @media(min-width:900px){
      .date{
         width: 50%;
@@ -295,32 +295,18 @@ i{
      {
        width: 35%;
        border: solid 0.05rem black;
-     }
-
-.languagegrid{
-      	display: grid;
-
-      padding-left: 45rem;
-      padding-right: 45rem;
-   
-      grid-template-columns: 1fr 1fr 1fr 1fr ;
-      grid-template-rows: 1fr;
-      }
-
+     }  
+				    
+			
 
 }
-
+  
 	    .date{
-
+       
         border: solid 0.05rem black;
 		     border-radius: 5px;
       }
-
-      
-      td{
-        font-size: 2.5rem;
-      }
-
+			    
 
     </style>
     <div class="topnav">
@@ -329,6 +315,9 @@ i{
   <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Slot</a>
 
   <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
+
+
+  <a href="<?php echo "request.php"; ?>"><i class="fa fa-user"></i>Appoinments</a>
 
     <a href="<?php echo "reset.php"; ?>"><i class="fa fa-tasks"></i>Change Password</a>
      </div>
@@ -360,7 +349,7 @@ i{
 	        	<form action="connect.php" method="post">
 		            <div class="form-group">
 		                <div class='input-group date' id='datepicker'>
-		                    <input type='text' name='date' class="form-control" />
+		                    <input type='text' name='date'class="form-control" />
 		                    <span class="input-group-addon" style="height: 5rem;">
 		                        <span class="glyphicon glyphicon-calendar"></span>
 		                    </span>
@@ -375,8 +364,8 @@ i{
               Please select your timezone:
             </h3>
 <div style="text-align: center;">
-<select name="timeZoneId">
-	<option gmtAdjustment="GMT-12:00" useDaylightTime="0" value="International Date Line West (GMT-12:00)">International Date Line West (GMT-12:00) </option>
+	<select name="timeZoneId">
+<option gmtAdjustment="GMT-12:00" useDaylightTime="0" value="International Date Line West (GMT-12:00)">International Date Line West (GMT-12:00) </option>
 	<option  gmtAdjustment="GMT-11:00" useDaylightTime="0" value="Midway Island, Samoa (GMT-11:00)"> Midway Island, Samoa (GMT-11:00)</option>
 	<option  gmtAdjustment="GMT-09:00" useDaylightTime="1" value="Alaska (GMT-09:00)"> </option>
 	<option gmtAdjustment="GMT-08:00" useDaylightTime="1" value="Pacific Time (US & Canada)(GMT-08:00)"> Pacific Time (US & Canada)(GMT-08:00)</option>
@@ -386,7 +375,7 @@ i{
 	<option  gmtAdjustment="GMT-07:00" useDaylightTime="1" value="Mountain Time (US & Canada)(GMT-07:00)"> Mountain Time (US & Canada)(GMT-07:00)</option>
 	<option gmtAdjustment="GMT-06:00" useDaylightTime="0" value="Central America(GMT-06:00)"> Central America(GMT-06:00)</option>
 	<option  gmtAdjustment="GMT-06:00" useDaylightTime="1" value="Central Time (US & Canada)(GMT-06:00"> Central Time (US & Canada)(GMT-06:00)</option>
-	<option  gmtAdjustment="GMT-06:00" useDaylightTime="1" value=" Guadalajara, Mexico City, Monterrey(GMT-06:00"> Guadalajara, Mexico City, Monterrey(GMT-06:00)</option>
+	<option  gmtAdjustment="GMT-06:00" useDaylightTime="1" value=" Guadalajara, Mexico City, Monterrey(GMT-06:00)"> Guadalajara, Mexico City, Monterrey(GMT-06:00)</option>
 	<option  gmtAdjustment="GMT-06:00" useDaylightTime="0" value="Saskatchewan(GMT-06:00) ">Saskatchewan(GMT-06:00) </option>
 	<option  gmtAdjustment="GMT-05:00" useDaylightTime="0" value="Bogota, Lima, Quito, Rio Branco(GMT-05:00"> Bogota, Lima, Quito, Rio Branco(GMT-05:00)</option>
 	<option  gmtAdjustment="GMT-05:00" useDaylightTime="1" value="Eastern Time (US & Canada)(GMT-05:00)"> Eastern Time (US & Canada)(GMT-05:00)</option>
@@ -407,7 +396,8 @@ i{
 	<option gmtAdjustment="GMT+01:00" useDaylightTime="1" value="Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna(GMT+01:00)"> Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna(GMT+01:00)</option>
 	<option gmtAdjustment="GMT+01:00" useDaylightTime="1" value="Belgrade, Bratislava, Budapest, Ljubljana, Prague(GMT+01:00)">Belgrade, Bratislava, Budapest, Ljubljana, Prague(GMT+01:00)</option>
 	<option  gmtAdjustment="GMT+01:00" useDaylightTime="1" value="Brussels, Copenhagen, Madrid, Paris(GMT+01:00)">Brussels, Copenhagen, Madrid, Paris(GMT+01:00) </option>
- <option  gmtAdjustment="GMT+05:30" useDaylightTime="0" value="Chennai, Kolkata, Mumbai, New Delhi(GMT+05:30)">Chennai, Kolkata, Mumbai, New Delhi(GMT+05:30) </option>
+
+	<option  gmtAdjustment="GMT+05:30" useDaylightTime="0" value="Chennai, Kolkata, Mumbai, New Delhi(GMT+05:30)">Chennai, Kolkata, Mumbai, New Delhi(GMT+05:30) </option>
 	<option  gmtAdjustment="GMT+05:45" useDaylightTime="0" value="Kathmandu(GMT+05:45)"> Kathmandu(GMT+05:45)</option>
 	<option  gmtAdjustment="GMT+06:00" useDaylightTime="1" value="Almaty, Novosibirsk(GMT+06:00)"> Almaty, Novosibirsk(GMT+06:00)</option>
 	<option  gmtAdjustment="GMT+06:00" useDaylightTime="0" value="Astana, Dhaka(GMT+06:00) ">Astana, Dhaka(GMT+06:00) </option>
@@ -426,7 +416,7 @@ i{
 	<option  gmtAdjustment="GMT+09:30" useDaylightTime="0" value="Darwin(GMT+09:30)">Darwin(GMT+09:30) </option>
 	<option  gmtAdjustment="GMT+10:00" useDaylightTime="0" value="Brisbane(GMT+10:00)"> Brisbane(GMT+10:00)</option>
 	<option gmtAdjustment="GMT+10:00" useDaylightTime="1" value="Canberra, Melbourne, Sydney(GMT+10:00)"> Canberra, Melbourne, Sydney(GMT+10:00)</option>
-  <option  gmtAdjustment="GMT+11:00" useDaylightTime="1" value="Magadan, Solomon Is., New Caledonia(GMT+11:00)"> </option>
+	<option  gmtAdjustment="GMT+11:00" useDaylightTime="1" value="Magadan, Solomon Is., New Caledonia(GMT+11:00)"> </option>
 	<option  gmtAdjustment="GMT+12:00" useDaylightTime="1" value="Fiji, Kamchatka, Marshall Is.(GMT+12:00)"> Auckland, Wellington(GMT+12:00)</option>
 	<option  gmtAdjustment="GMT+12:00" useDaylightTime="0" value="Fiji, Kamchatka, Marshall Is.(GMT+12:00)"> </option>
 
@@ -582,34 +572,14 @@ i{
 
   </div>
 </div>
-<div>
-  <div class="languagegrid" style="text-align: center;">
-  <div>
-        <td>English</td>
-        <th><input type="checkbox" name="Languages[]" value="E"></th>
-  </div>
-  <div>
-        <td>Hindi</td>
-        <th><input type="checkbox" name="Languages[]" value="H"></th>
-
-  </div><div>	      <td>Mandarin</td>
-        <th><input type="checkbox" name="Languages[]" value="M"></th>
-  </div>
-  <div style="text-align: center;">
-        <td>Spanish</td>
-        <th><input type="checkbox" name="Languages[]" value="S"></th>
-   </div>
-
-  </div>
-
 <div style="text-align: center;">
 <h3 class="headerdoctor">E-mail:</h3>
-            <input type="email" name="email" value = "<?php  echo $_SESSION['user'];?>" readonly>
+            <input type="email" name="email" value = "<?php  echo $_SESSION["user"];?>" />
 
 
 
 <br>
-<br>
+<br>					    
 <div style="text-align: center;">
 
 

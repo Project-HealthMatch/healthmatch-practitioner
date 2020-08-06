@@ -24,10 +24,12 @@ else{
            $sql = "UPDATE hac_user SET password='$new' WHERE username='$username'";
 
 if (mysqli_query($conn, $sql))
-  {  echo "password updated successfully";
+  {  echo '<script>alert("Password Update Successfully!")</script>'; 
+
   }
 else {
-  echo "password not matching: " ;
+echo '<script>alert("Passwords do not match")</script>'; 
+
      }
 
         mysqli_close($conn);
@@ -35,12 +37,14 @@ else {
 
 
     else{
-       echo "<h2>original password incorrect</h2>";
+      echo '<script>alert("Old Password is incorrect!")</script>'; 
+
          }
                                     }
 
     else{
-    echo "<h2>invalid ID</h2>";
+    echo '<script>alert("Invalid username!")</script>'; 
+
         }
 
 

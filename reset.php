@@ -13,9 +13,9 @@
        padding: 0;
       }
       body {
-   
+      background-color: #c3dae9;
 
-background-color:#adece9 ;
+
         font-family: "Montserrat", sans-serif;
 
      height: 100%;
@@ -257,10 +257,7 @@ padding-right:27% ;
         display: block;
       }
 
-body{
-    background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-        background-image: linear-gradient(to top, #adece9 0%, #9ba0da 100%);
-}
+
 
     </style>
   </head>
@@ -282,9 +279,9 @@ body{
         <form action="resetpassword.php" method="POST">
            
      
-            <input id="Email" name="username" type="text" placeholder="Username" />
-            <input id="Password" name="password" type="password" placeholder="Enter Old Password" />
-            <input id="newf" name="new" type="newf" placeholder="Enter New Password" />
+            <input id="Email" name="Email" type="email" placeholder="Email" />
+            <input id="Password" name="Password" type="password" placeholder="Enter Old Password" />
+            <input id="newf" name="newf" type="newf" placeholder="Enter New Password" />
             <input id=conf name="conf" type="conf" placeholder="Confirm New Password" />
 
 

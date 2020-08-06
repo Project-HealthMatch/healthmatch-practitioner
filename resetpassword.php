@@ -14,7 +14,7 @@ $conf = $_POST['conf'];
                           }
 else{
     $stmt = $conn->prepare("select * from hac_user where username= ?");
-    $stmt->bind_param("i", $username);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt_result = $stmt->get_result();
        if($stmt_result ->num_rows > 0)

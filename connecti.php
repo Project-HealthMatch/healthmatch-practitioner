@@ -389,7 +389,7 @@ if(mysqli_query($conn, $sql)){
 
 
                      echo'    <div>';
-                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit" id="showHiddenBlock>';
+                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit" id="showHiddenBlock">';
                    echo'    </div>';
 
                    echo'  </form>';

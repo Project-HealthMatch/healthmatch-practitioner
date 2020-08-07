@@ -623,13 +623,41 @@ height: 100%;
       }
 @media(min-width:900px){
      .date{
-        width: 55%;
+        width: 60%;
         margin-left:0;
       }
       select{
         width:30%;
       }
 
+}
+
+.topnav {
+  background-color: rgb(142, 196, 221);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #032b5a;
+  color: white;
 }
 
 
@@ -641,6 +669,23 @@ height: 100%;
 
   </head>
   <body>
+	     <div class="topnav">
+        <div style="text-align:right;" >
+
+  <a href="<?php echo "dashboard.php"; ?>">Slot</a>
+
+ 
+
+
+  <a href="<?php echo "request.php"; ?>">Appoinments</a>
+
+    <a href="<?php echo "reset.php"; ?>">Change Password</a>
+		
+		    <a href="<?php echo "form.php"; ?>">Available Doctors</a>
+		
+		 <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
+     </div>
+
     <div style="text-align: left; ">
 <img src="logo.png" class="logo">
 </div>

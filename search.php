@@ -238,6 +238,24 @@ height: 100%;
       }
 
       }
+	    
+	      input[type="text"] {
+              font-family: "Abel", sans-serif;
+
+              border-radius: 5px 5px 5px 5px;
+
+            margin:0;
+              outline: none;
+              border: none;
+            background-color:rgba(255, 255, 255, 0.788);
+              height: 5rem;
+             margin-bottom: 1rem;
+              transition: 0.2s linear;
+             color:black;
+              width:90%;
+      font-size: 2rem;
+            }
+
     </style>
 
 
@@ -271,6 +289,9 @@ height: 100%;
   <br>
  <input type="text" class="date" style="width:50%;"
       name = "date" value = "<?php echo $_POST['date'];?>" readonly>
+	
+	<input type="text" class="date" style="width:50%;"
+      name = "date" value = "<?php echo $_POST['timeZoneId'];?>" readonly>
 
   <?php
 

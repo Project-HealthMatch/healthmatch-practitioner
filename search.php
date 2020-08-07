@@ -254,7 +254,31 @@ height: 100%;
              color:black;
               width:90%;
       font-size: 2rem;
+		      margin-left:1rem;
             }
+
+	    
+	    @media(min-width:900px){
+		    
+	      input[type="text"] {
+              font-family: "Abel", sans-serif;
+
+              border-radius: 5px 5px 5px 5px;
+
+            margin:0;
+              outline: none;
+              border: none;
+            background-color:rgba(255, 255, 255, 0.788);
+              height: 5rem;
+             margin-bottom: 1rem;
+              transition: 0.2s linear;
+             color:black;
+              width:90%;
+      font-size: 2rem;
+		      margin-left:5%;
+            }
+		    
+	    }
 
     </style>
 

@@ -661,7 +661,22 @@ height: 100%;
 }
 
 
+@media(max-width:900px)
+{
 
+.topnav{
+  font-size:1rem;
+}
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+}
+	
           </style>
 
 

@@ -275,7 +275,7 @@ height: 100%;
              color:black;
               width:90%;
       font-size: 2rem;
-		      margin-left:5%;
+		      margin-left:15%;
             }
 		    
 	    }
@@ -365,7 +365,8 @@ $slot = $_POST['timeZoneId'];
                // Close result set
                mysqli_free_result($result);
            } else{
-              echo'<div>';
+             <div style="text-align:center;" >
+
                echo'<h1>No doctors available!</h1>';
                 echo'</div>';
            }

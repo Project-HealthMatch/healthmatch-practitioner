@@ -312,16 +312,18 @@ i{
     <div class="topnav">
         <div style="text-align:right;" >
 
-  <a href="<?php echo "dashboard.php"; ?>"><i class="fa fa-home"></i>Slot</a>
+  <a href="<?php echo "dashboard.php"; ?>">Slot</a>
 
-  <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
+ 
 
 
   <a href="<?php echo "request.php"; ?>"><i class="fa fa-user"></i>Appoinments</a>
 
-    <a href="<?php echo "reset.php"; ?>"><i class="fa fa-tasks"></i>Change Password</a>
+    <a href="<?php echo "reset.php"; ?>">Change Password</a>
 		
-		    <a href="<?php echo "reset.php"; ?>"><i class="fa fa-tasks"></i>Available Doctors</a>
+		    <a href="<?php echo "form.php"; ?>">Available Doctors</a>
+		
+		 <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
      </div>
 
 

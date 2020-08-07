@@ -256,10 +256,11 @@ height: 100%;
       font-size: 2rem;
 		      margin-left:1rem;
             }
-
+ @media(max-width:900px){
 	       input[type="text"] {
 		       
 		       width:99%;
+	    }
 	    }
 	    @media(min-width:900px){
 		    

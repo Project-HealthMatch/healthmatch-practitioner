@@ -276,7 +276,7 @@ height: 100%;
              margin-bottom: 1rem;
               transition: 0.2s linear;
              color:black;
-              width:30%;
+              width:21%;
       font-size: 2rem;
 		      margin-left:30%;
             }

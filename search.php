@@ -277,7 +277,7 @@ height: 100%;
              margin-bottom: 1rem;
               transition: 0.2s linear;
              color:black;
-              width:21%;
+              width:45%;
       font-size: 2rem;
 		      margin-left:30%;
             }
@@ -315,10 +315,10 @@ height: 100%;
 <img src="logo.png" class="logo">
 </div>
   <br>
- <input type="text" class="date" style="width:50%;"
+ <input type="text" class="date" 
       name = "date" value = "<?php echo $_POST['date'];?>" readonly>
 	
-	<input type="text" class="date" style="width:50%;"
+	<input type="text" class="date" 
       name = "date" value = "<?php echo $_POST['timeZoneId'];?>" readonly>
 
   <?php

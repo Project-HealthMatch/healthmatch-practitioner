@@ -203,6 +203,10 @@ body {
      }
 
       }
+   
+    #initiallyHiddenBlock {
+          display: none;
+      }
 
 </style>
 <?php
@@ -266,7 +270,7 @@ for($i=0;$i<$n;$i++)
 $m=str_replace($slot,'',$emptyarray);
 
 }}
-print_r($m);
+
 $b=implode(",",$m);
 
 $sql = "UPDATE bookings SET slot='$b' WHERE email= '$docemail' AND date ='$date'";
@@ -288,7 +292,7 @@ if(mysqli_query($conn, $sql)){
 
 
               echo '<div style="text-align: center;">';
-                       echo '<form method="POST" name="google-sheet">';
+                       echo '<form method="POST" name="google-sheet" id="HideBlock">';
 
 
 
@@ -313,7 +317,7 @@ if(mysqli_query($conn, $sql)){
 
 
                      echo'    <div>';
-                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit">';
+                      echo '<input type = "submit" class ="acceptbtn" value = "Confirm" name ="submit" id="showHiddenBlock>';
                    echo'    </div>';
 
                    echo'  </form>';
@@ -326,6 +330,34 @@ if(mysqli_query($conn, $sql)){
 
        $conn->close();}
        ?>
+          
+           <div id="initiallyHiddenBlock">
+
+        <div class="buttongrid">
+ <a href="<?php echo "request.php"; ?>">
+        <button class="homebtn" :hover>
+         <i class="fa fa-people"></i> Accept Appointment
+        </button>
+      </a>
+
+
+
+
+     <a href="<?php echo "dashboard.php"; ?>">
+        <button class="homebtn" :hover>
+         <i class="fa fa-people"></i> Pick Slots
+        </button>
+      </a>
+
+     
+    <a href="<?php echo "logout.php"; ?>">
+        <button class="homebtn" :hover>
+         <i class="fa fa-power-off"></i> Logout
+        </button>
+      </a>
+       </div>
+</div>
+          </body>
 
      <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzf_IWvMFS9Nzv7z6CKFbfNTnAmOPNS1SSwYtcTX6O3zdWQkHXk/exec'
@@ -346,3 +378,17 @@ if(mysqli_query($conn, $sql)){
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script>
+     $(document).ready(function() {
+      $('#showHiddenBlock').click(function() {
+          $('#initiallyHiddenBlock').show();
+         $('#HideBlock').hide();
+      });
+  });
+  </script>
+      
+</html>

@@ -157,6 +157,10 @@ height: 100%;
         /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
       }
 
+      .card{
+        margin-top:1rem;
+      }
+
       @media (min-width: 900px) {
         .card {
           margin-left: 15%;
@@ -166,9 +170,73 @@ height: 100%;
 
       @media (max-width: 900px) {
         .card {
-          margin-left: 15%;
-          width: 100%;
+          margin-left: 4%;
+          width: 90%;
         }
+      }
+
+
+}
+
+.topnav {
+  background-color: rgb(142, 196, 221);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #032b5a;
+  color: white;
+}
+
+
+@media(max-width:900px)
+{
+
+.topnav{
+  font-size:1rem;
+}
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+}
+ .logo{
+        width:30%;
+        margin-top: 1rem;
+        margin-left: 1rem;
+      }
+
+
+
+      @media(min-width:800px){
+        .logo{
+        width: 15%;
+        margin-top: 3rem;
+        margin-left: 3rem;
+      }
+
       }
     </style>
 
@@ -176,14 +244,36 @@ height: 100%;
 
   </head>
 
-   <div style="text-align: left; ">
+      <div class="topnav">
+        <div style="text-align:right;" >
+
+  <a href="<?php echo "dashboard.php"; ?>">Slot</a>
+
+ 
+
+
+  <a href="<?php echo "request.php"; ?>">Appoinments</a>
+
+    <a href="<?php echo "reset.php"; ?>">Change Password</a>
+		
+		    <a href="<?php echo "form.php"; ?>">Available Doctors</a>
+		
+		 <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
+     </div>
+
+
+</div>
+
+
+     <div style="text-align: left; ">
 <img src="logo.png" class="logo">
 </div>
   <br>
  <input type="text" class="date" style="width:50%;"
       name = "date" value = "<?php echo $_POST['date'];?>" readonly>
-  
+
   <?php
+
 
 $conn = mysqli_connect("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020", "appointment");
 $date= $_POST['date'];
@@ -204,14 +294,18 @@ $slot = $_POST['timeZoneId'];
                       if($slot == $sr)
                       {
 
-                       
+
   echo '<div class = "card ">';
   echo '<div class = "head">';
+  echo'<h3>Email:</h3>';
   echo $row['email'];
+  echo'<br>';
+  echo'<h3>Timezone:</h3>';
+  echo $row['timeZoneId'];
   echo '</div>';
   echo '</div>';
-                      
-                      
+
+
 
 
                       }
@@ -226,7 +320,9 @@ $slot = $_POST['timeZoneId'];
                // Close result set
                mysqli_free_result($result);
            } else{
-               echo "No doctors available";
+              echo'<div>';
+               echo'<h1>No doctors available!</h1>';
+                echo'</div>';
            }
        } else{
            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);

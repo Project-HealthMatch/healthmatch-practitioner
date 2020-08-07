@@ -257,7 +257,10 @@ height: 100%;
 		      margin-left:1rem;
             }
 
-	    
+	       input[type="text"] {
+		       
+		       width:99%;
+	    }
 	    @media(min-width:900px){
 		    
 	      input[type="text"] {
@@ -273,7 +276,7 @@ height: 100%;
              margin-bottom: 1rem;
               transition: 0.2s linear;
              color:black;
-              width:40%;
+              width:30%;
       font-size: 2rem;
 		      margin-left:30%;
             }

@@ -317,7 +317,7 @@ i{
  
 
 
-  <a href="<?php echo "request.php"; ?>"><i class="fa fa-user"></i>Appoinments</a>
+  <a href="<?php echo "request.php"; ?>">Appoinments</a>
 
     <a href="<?php echo "reset.php"; ?>">Change Password</a>
 		

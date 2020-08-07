@@ -347,7 +347,7 @@ $b=implode(",",$m);
 
 $sql = "UPDATE bookings SET slot='$b' WHERE email= '$docemail' AND date ='$date'";
 if(mysqli_query($conn, $sql)){
-    echo "Record was updated successfully.";
+   
 } else {
     echo "ERROR: Could not able to execute $sql. "
                             . mysqli_error($conn);

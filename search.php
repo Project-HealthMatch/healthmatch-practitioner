@@ -259,7 +259,7 @@ height: 100%;
  @media(max-width:900px){
 	       input[type="text"] {
 		       
-		       width:99%;
+		       width:97%;
 	    }
 	    }
 	    @media(min-width:900px){

@@ -273,9 +273,9 @@ height: 100%;
              margin-bottom: 1rem;
               transition: 0.2s linear;
              color:black;
-              width:90%;
+              width:40%;
       font-size: 2rem;
-		      margin-left:15%;
+		      margin-left:30%;
             }
 		    
 	    }

@@ -685,6 +685,7 @@ height: 100%;
 		
 		 <a href="<?php echo "logout.php"; ?>"><i class="fa fa-power-off"></i>Logout</a>
      </div>
+		     </div>
 
     <div style="text-align: left; ">
 <img src="logo.png" class="logo">

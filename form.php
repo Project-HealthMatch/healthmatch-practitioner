@@ -623,7 +623,7 @@ height: 100%;
       }
 @media(min-width:900px){
      .date{
-        width: 52%;
+        width: 55%;
         margin-left:0;
       }
       select{

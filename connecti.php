@@ -303,7 +303,7 @@ session_start();
 
 
      $conn = new mysqli("healthmatch-server.mysql.database.azure.com","HEALTHMATCH@healthmatch-server","Hackathon2020","appointment");
-     if($conn->connect_error)
+   if($conn->connect_error)
      {
        die('connection failed :' .$conn->connect_error);
 
@@ -329,7 +329,7 @@ session_start();
             echo "<tr>";
             $str =(explode(",",$row['slot']));
 
-      
+        $emptyarray=array_merge($emptyarray,$str);
 
 
 
@@ -347,7 +347,7 @@ $b=implode(",",$m);
 
 $sql = "UPDATE bookings SET slot='$b' WHERE email= '$docemail' AND date ='$date'";
 if(mysqli_query($conn, $sql)){
-   
+    
 } else {
     echo "ERROR: Could not able to execute $sql. "
                             . mysqli_error($conn);

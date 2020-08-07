@@ -365,7 +365,7 @@ $slot = $_POST['timeZoneId'];
                // Close result set
                mysqli_free_result($result);
            } else{
-             <div style="text-align:center;" >
+             echo'<div style="text-align:center;" >';
 
                echo'<h1>No doctors available!</h1>';
                 echo'</div>';

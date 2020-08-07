@@ -252,7 +252,7 @@ height: 100%;
              margin-bottom: 1rem;
               transition: 0.2s linear;
              color:black;
-              width:90%;
+              width:80%;
       font-size: 2rem;
 		      margin-left:1rem;
             }

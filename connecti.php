@@ -208,6 +208,78 @@ body {
           display: none;
       }
 
+   
+    .homebtn {
+        border: 1px solid white;
+        background-color: rgb(105, 223, 197);
+        margin: 0.5rem;
+        width: 90%;
+        height: 5rem;
+        font-size: 20px;
+        font-family: "montserrat";
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.8s;
+        position: relative;
+        overflow: hidden;
+        color: black;
+        margin-left:1rem;
+      }
+
+      @media (min-width: 600px) {
+        .homebtn {
+          border: 1px solid white;
+          border-radius: 5px;
+          margin: 1rem;
+          width: 80%;
+          height: 5rem;
+          font-size: 20px;
+          font-family: "montserrat";
+          font-weight: 600;
+          cursor: pointer;
+          color: black;
+          background-color: rgb(105, 223, 197);
+          transition: 0.8s;
+          position: relative;
+          overflow: hidden;
+        }
+      }
+
+      .homebtn:hover {
+        color: white;
+        background: #51a09b;
+      }
+
+     
+
+      @media(min-width:900px)
+     {
+
+       .buttongrid{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-left: 5%;
+          margin-top:15%;
+
+      }
+      }
+   
+    @media(max-width:900px)
+     {
+
+       .buttongrid{
+
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-left: 5%;
+          margin-top:25%;
+
+      }
+      }
 </style>
 <?php
 

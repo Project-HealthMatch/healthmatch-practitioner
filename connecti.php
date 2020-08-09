@@ -339,7 +339,7 @@ session_start();
 $n = sizeof($emptyarray);
 for($i=0;$i<$n;$i++)
 { if ($emptyarray[$i] == $slot){
-$m=str_replace($slot,''$emptyarray);
+$m=str_replace($slot,'',$emptyarray);
 
 }}
 

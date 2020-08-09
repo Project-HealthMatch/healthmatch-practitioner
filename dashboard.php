@@ -422,7 +422,7 @@ i{
 	<option gmtAdjustment="GMT+10:00" useDaylightTime="1" value="Canberra, Melbourne, Sydney(GMT+10:00)"> Canberra, Melbourne, Sydney(GMT+10:00)</option>
 	<option  gmtAdjustment="GMT+11:00" useDaylightTime="1" value="Magadan, Solomon Is., New Caledonia(GMT+11:00)">Magadan, Solomon Is., New Caledonia(GMT+11:00) </option>
 	<option  gmtAdjustment="GMT+12:00" useDaylightTime="1" value=" Auckland, Wellington(GMT+12:00)"> Auckland, Wellington(GMT+12:00)</option>
-	<option  gmtAdjustment="GMT+12:00" useDaylightTime="0" value="Fiji, Kamchatka, Marshall Is.(GMT+12:00)"> </option>
+	<option  gmtAdjustment="GMT+12:00" useDaylightTime="0" value="Fiji, Kamchatka, Marshall Is.(GMT+12:00)"> Fiji, Kamchatka, Marshall Is.(GMT+12:00)</option>
 
 </select>
 </div>

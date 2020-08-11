@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login Page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" type="text/css href="css/bootstrap.css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Audiowide);

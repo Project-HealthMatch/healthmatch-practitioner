@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css href="css/bootstrap.css">
+                                                                    <script
+    type="text/javascript"
+    src="https://cdn.weglot.com/weglot.min.js"
+  ></script>
+  <script>
+    Weglot.initialize({
+      api_key: "wg_6595b397394b082513ae5269c8992a3d7",
+    });
+  </script>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Audiowide);
 

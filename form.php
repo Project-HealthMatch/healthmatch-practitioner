@@ -685,6 +685,27 @@ height: 100%;
   font-size: 1.2rem;
 }
 }
+	      
+	       table {
+
+  border-radius: 5px;
+   background-image: linear-gradient(-225deg, #ececec 0%, rgb(78, 221, 173) 80%);
+ color: rgb(34, 34, 34);
+
+
+
+}
+
+td{
+
+  font-size: 2rem;
+}
+
+th{
+  font-size: 3rem;
+  color:rgb(15, 7, 53);
+}
+
 	
           </style>
 

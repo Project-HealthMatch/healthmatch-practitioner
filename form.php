@@ -706,6 +706,11 @@ th{
   color:rgb(15, 7, 53);
 }
 
+select{
+  font-size:2rem;
+    color: linear-gradient(-225deg, #ececec 0%, rgb(78, 221, 173) 80%);
+    width: 25%;
+}
 	
           </style>
 
@@ -803,7 +808,7 @@ th{
 <div style="text-align: center;">
 
 
-    <button type="submit" class=" submits " value="Submit"> PROCEED</button>
+    <button type="submit" class=" submits " value="Submit">CHECK</button>
 </div>
             </form>
 

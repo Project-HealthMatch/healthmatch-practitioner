@@ -1,3 +1,13 @@
+<?
+session_start();
+
+if($_SESSION["user"]==true){
+
+}
+else{
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 
    <html>

@@ -23,6 +23,15 @@ else{
       rel="stylesheet"
       id="bootstrap-css"
     />
+	    <script
+    type="text/javascript"
+    src="https://cdn.weglot.com/weglot.min.js"
+  ></script>
+  <script>
+    Weglot.initialize({
+      api_key: "wg_6595b397394b082513ae5269c8992a3d7",
+    });
+  </script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
       rel="stylesheet"
